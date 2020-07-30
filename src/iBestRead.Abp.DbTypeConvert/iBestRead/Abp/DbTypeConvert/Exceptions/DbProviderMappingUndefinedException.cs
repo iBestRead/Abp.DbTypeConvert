@@ -4,8 +4,8 @@ namespace iBestRead.Abp.DbTypeConvert.Exceptions
 {
     public class DbProviderMappingUndefinedException : BusinessException
     {
-        public DbProviderMappingUndefinedException(DbProvider dbProvider)
-            : base("DBTC:000001", $"{dbProvider.ToString()} mapping is not defined.")
+        public DbProviderMappingUndefinedException(DbProviderType dbProviderType)
+            : base("DBTC:000001", $"{dbProviderType.ToString()} mapping is not defined.")
         {
 
         }

@@ -1,6 +1,6 @@
 namespace iBestRead.Abp.DbTypeConvert
 {
-    public enum DbProvider
+    public enum DbProviderType
     {
         
         SqlServer,

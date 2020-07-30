@@ -9,7 +9,7 @@ namespace iBestRead.Abp.DbTypeConvert
 {
     public class MappingsLoader : IMappingsLoader, ISingletonDependency
     {
-        private readonly ConcurrentDictionary<DbProvider, DbTypeMap> _mappings;
+        private readonly ConcurrentDictionary<DbProviderType, DbTypeMap> _mappings;
         
         private readonly IVirtualFileProvider _virtualFileProvider;
         private readonly IJsonSerializer _jsonSerializer;
@@ -20,7 +20,7 @@ namespace iBestRead.Abp.DbTypeConvert
         {
             _virtualFileProvider = virtualFileProvider;
             _jsonSerializer = jsonSerializer;
-            _mappings = new ConcurrentDictionary<DbProvider, DbTypeMap>();
+            _mappings = new ConcurrentDictionary<DbProviderType, DbTypeMap>();
             Initial();
         }
 
@@ -36,13 +36,13 @@ namespace iBestRead.Abp.DbTypeConvert
                 if(null == mapping)
                     continue;
 
-                _mappings.TryAdd(mapping.DbProvider, mapping);
+                _mappings.TryAdd(mapping.DbProviderType, mapping);
             }
         }
         
-        public DbTypeMap Get(DbProvider dbProvider)
+        public DbTypeMap Get(DbProviderType dbProviderType)
         {
-            _mappings.TryGetValue(dbProvider, out var dbTypeMap);
+            _mappings.TryGetValue(dbProviderType, out var dbTypeMap);
 
             return dbTypeMap;
         }

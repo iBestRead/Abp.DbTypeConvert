@@ -14,13 +14,13 @@ namespace iBestRead.Abp.DbTypeConvert
             _mappingsLoader = mappingsLoader;
         }
 
-        public string ToLanguageType(DbProvider dbProvider, LanguageType targetLanguage, string dbColumnType)
+        public string ToLanguageType(DbProviderType dbProviderType, LanguageType targetLanguage, string dbColumnType)
         {
             Check.NotNullOrEmpty(dbColumnType, nameof(dbColumnType));
 
-            var providerMapping = _mappingsLoader.Get(dbProvider);
+            var providerMapping = _mappingsLoader.Get(dbProviderType);
             if (null == providerMapping)
-                throw new DbProviderMappingUndefinedException(dbProvider);
+                throw new DbProviderMappingUndefinedException(dbProviderType);
 
             var columnMapping = providerMapping.Columns
                 .FirstOrDefault(e => e.Source == dbColumnType);

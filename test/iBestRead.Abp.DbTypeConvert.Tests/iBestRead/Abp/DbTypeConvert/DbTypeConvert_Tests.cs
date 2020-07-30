@@ -3,7 +3,7 @@ using Shouldly;
 using Volo.Abp.Testing;
 using Xunit;
 
-namespace iBestRead.Abp.DbTypeConvert.Tests.iBestRead.Abp.DbTypeConvert
+namespace iBestRead.Abp.DbTypeConvert
 {
     public class DbTypeConvert_Tests: AbpIntegratedTest<AbpDbTypeConvertTestModule>
     {
@@ -22,7 +22,7 @@ namespace iBestRead.Abp.DbTypeConvert.Tests.iBestRead.Abp.DbTypeConvert
         public void Undefined_ColumnType_Throw_Exception(string dbColumnType)
         {
             Should.Throw<DbColumnTypeMappingUndefinedException>(() =>
-                _dbTypeConvert.ToCSharpType(DbProvider.SqlServer, dbColumnType));
+                _dbTypeConvert.ToCSharpType(DbProviderType.SqlServer, dbColumnType));
         }
         
         [Theory]
@@ -33,7 +33,7 @@ namespace iBestRead.Abp.DbTypeConvert.Tests.iBestRead.Abp.DbTypeConvert
         [InlineData("int", "int")]
         public void SqlServer_To_CSharp(string dbColumnType, string languageType)
         {
-            var result = _dbTypeConvert.ToCSharpType(DbProvider.SqlServer, dbColumnType);
+            var result = _dbTypeConvert.ToCSharpType(DbProviderType.SqlServer, dbColumnType);
             result.ShouldBe(languageType);
         }
         
@@ -45,7 +45,7 @@ namespace iBestRead.Abp.DbTypeConvert.Tests.iBestRead.Abp.DbTypeConvert
         [InlineData("int", "INT")]
         public void SqlServer_To_MaxCompute(string dbColumnType, string languageType)
         {
-            var result = _dbTypeConvert.ToMaxComputeType(DbProvider.SqlServer, dbColumnType);
+            var result = _dbTypeConvert.ToMaxComputeType(DbProviderType.SqlServer, dbColumnType);
             result.ShouldBe(languageType);
         }
         

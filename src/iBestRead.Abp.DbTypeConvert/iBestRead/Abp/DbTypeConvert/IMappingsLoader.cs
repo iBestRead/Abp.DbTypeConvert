@@ -2,6 +2,6 @@ namespace iBestRead.Abp.DbTypeConvert
 {
     public interface IMappingsLoader
     {
-        DbTypeMap Get(DbProvider dbProvider);
+        DbTypeMap Get(DbProviderType dbProviderType);
     }
 }

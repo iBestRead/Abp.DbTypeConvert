@@ -4,18 +4,18 @@ namespace iBestRead.Abp.DbTypeConvert
     {
         public static string ToMaxComputeType(
             this IDbTypeConvert dbTypeConvert, 
-            DbProvider dbProvider,
+            DbProviderType dbProviderType,
             string dbColumnType)
         {
-            return dbTypeConvert.ToLanguageType(dbProvider, LanguageType.MaxCompute, dbColumnType);
+            return dbTypeConvert.ToLanguageType(dbProviderType, LanguageType.MaxCompute, dbColumnType);
         }
 
         public static string ToCSharpType(
             this IDbTypeConvert dbTypeConvert, 
-            DbProvider dbProvider, 
+            DbProviderType dbProviderType, 
             string dbColumnType)
         {
-            return dbTypeConvert.ToLanguageType(dbProvider, LanguageType.CSharp, dbColumnType);
+            return dbTypeConvert.ToLanguageType(dbProviderType, LanguageType.CSharp, dbColumnType);
         }
     }
 }

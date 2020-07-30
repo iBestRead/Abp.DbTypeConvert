@@ -2,7 +2,7 @@ using Shouldly;
 using Volo.Abp.Testing;
 using Xunit;
 
-namespace iBestRead.Abp.DbTypeConvert.Tests.iBestRead.Abp.DbTypeConvert
+namespace iBestRead.Abp.DbTypeConvert
 {
     public class MappingsLoader_Tests : AbpIntegratedTest<AbpDbTypeConvertTestModule>
     {
@@ -15,7 +15,7 @@ namespace iBestRead.Abp.DbTypeConvert.Tests.iBestRead.Abp.DbTypeConvert
         [Fact]
         public void Can_Get_SqlServer_Mapping()
         {
-            var result = _mappingsLoader.Get(DbProvider.SqlServer);
+            var result = _mappingsLoader.Get(DbProviderType.SqlServer);
         
             result.ShouldNotBeNull();
         }

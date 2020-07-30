@@ -4,7 +4,7 @@ namespace iBestRead.Abp.DbTypeConvert
 {
     public class DbTypeMap
     {
-        public DbProvider DbProvider { get; set; }
+        public DbProviderType DbProviderType { get; set; }
 
         public List<Column> Columns { get; set; }
 
