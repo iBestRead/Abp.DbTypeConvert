@@ -1,0 +1,487 @@
+{
+  "DbProvider": "SqlServer",
+  "Columns": [
+    {
+      "Source": "image",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "byte[]"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BINARY"
+        }
+      ]
+    },
+    {
+      "Source": "binary",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "byte[]"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BINARY"
+        }
+      ]
+    },
+    {
+      "Source": "varbinary",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "byte[]"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BINARY"
+        }
+      ]
+    },
+    {
+      "Source": "text",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "string"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "STRING"
+        }
+      ]
+    },
+    {
+      "Source": "ntext",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "string"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "STRING"
+        }
+      ]
+    },
+    {
+      "Source": "varchar",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "string"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "STRING"
+        }
+      ]
+    },
+    {
+      "Source": "nvarchar",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "string"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "STRING"
+        }
+      ]
+    },
+    {
+      "Source": "varchar2",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "string"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "STRING"
+        }
+      ]
+    },
+    {
+      "Source": "nvarchar2",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "string"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "STRING"
+        }
+      ]
+    },
+    {
+      "Source": "xml",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "string"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "STRING"
+        }
+      ]
+    },
+    {
+      "Source": "uniqueidentifier",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "Guid"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "STRING"
+        }
+      ]
+    },
+    {
+      "Source": "date",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "DateTime"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "DATETIME"
+        }
+      ]
+    },
+    {
+      "Source": "smalldatetime",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "DateTime"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "DATETIME"
+        }
+      ]
+    },
+    {
+      "Source": "datetime",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "DateTime"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "DATETIME"
+        }
+      ]
+    },
+    {
+      "Source": "datetime2",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "DateTime"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "DATETIME"
+        }
+      ]
+    },
+    {
+      "Source": "time",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "TimeSpan"
+        }
+      ]
+    },
+    {
+      "Source": "datetimeoffset",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "DateTimeOffset"
+        }
+      ]
+    },
+    {
+      "Source": "timestamp",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "DateTime"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BINARY"
+        }
+      ]
+    },
+    {
+      "Source": "tinyint",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "byte"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BINARY"
+        }
+      ]
+    },
+    {
+      "Source": "smallint",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "short"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BINARY"
+        }
+      ]
+    },
+    {
+      "Source": "int",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "int"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "INT"
+        }
+      ]
+    },
+    {
+      "Source": "bigint",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "long"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BIGINT"
+        }
+      ]
+    },
+    {
+      "Source": "bit",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "bool"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BOOLEAN"
+        }
+      ]
+    },
+    {
+      "Source": "char",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "string"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "STRING"
+        }
+      ]
+    },
+    {
+      "Source": "nchar",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "string"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "STRING"
+        }
+      ]
+    },
+    {
+      "Source": "uniqueide",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "Guid"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "STRING"
+        }
+      ]
+    },
+    {
+      "Source": "numeric",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "decimal"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "DECIMAL"
+        }
+      ]
+    },
+    {
+      "Source": "integer",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "int"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "INT"
+        }
+      ]
+    },
+    {
+      "Source": "money",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "decimal"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "DECIMAL"
+        }
+      ]
+    },
+    {
+      "Source": "real",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "float"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "FLOAT"
+        }
+      ]
+    },
+    {
+      "Source": "single",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "float"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "FLOAT"
+        }
+      ]
+    },
+    {
+      "Source": "smallmoney",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "decimal"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "DECIMAL"
+        }
+      ]
+    },
+    {
+      "Source": "decimal",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "decimal"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "DECIMAL"
+        }
+      ]
+    },
+    {
+      "Source": "bfile",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "byte[]"
+        }
+      ]
+    },
+    {
+      "Source": "float",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "double"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "DOUBLE"
+        }
+      ]
+    },
+    {
+      "Source": "number",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "decimal"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "DECIMAL"
+        }
+      ]
+    },
+    {
+      "Source": "boolean",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "bool"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BOOLEAN"
+        }
+      ]
+    },
+    {
+      "Source": "longtext",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "string"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "STRING"
+        }
+      ]
+    }
+  ]
+}

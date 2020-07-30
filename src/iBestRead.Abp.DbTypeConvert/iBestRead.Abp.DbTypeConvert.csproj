@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="../../abp.props"></Import>
+    <Import Project="../../common.props"></Import>
+    <Import Project="../../packages.props"></Import>
+    <Import Project="../../configureawait.props"></Import>
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+        <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+        <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+        <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>3.0.4.1</Version>
+        <Description>abp module for db type convert</Description>
+        <AssemblyTitle>abp module for db type convert</AssemblyTitle>
+        <Authors>AkiniX</Authors>
+        <Company>iBestRead</Company>
+        <AssemblyName>iBestRead.Abp.DbTypeConvert</AssemblyName>
+        <PackageId>iBestRead.Abp.DbTypeConvert</PackageId>
+        <PackageTags>abp;abpvnext;Db;Convert</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.VirtualFileSystem" Version="$(AbpVersion)" />
+        <PackageReference Include="Volo.Abp.Json" Version="$(AbpVersion)" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="iBestRead\Abp\DbTypeConvert\Mappings\**\*.*" />
+        <Content Remove="iBestRead\Abp\DbTypeConvert\Mappings\**\*.*" />
+    </ItemGroup>
+
+</Project>
