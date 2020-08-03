@@ -249,7 +249,7 @@
         },
         {
           "Language": "MaxCompute",
-          "TypeName": "BINARY"
+          "TypeName": "INT"
         }
       ]
     },
