@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using iBestRead.Abp.DbTypeConvert.Exceptions;
 using Volo.Abp;
@@ -37,5 +38,16 @@ namespace iBestRead.Abp.DbTypeConvert
             return languageTypeMapping.TypeName;
 
         }
+
+        public string ToLanguageType(string dbProviderType, LanguageType targetLanguage, string dbColumnType)
+        {
+            var canParse = Enum.TryParse<DbProviderType>(dbProviderType, out var providerType);
+
+            if (!canParse)
+                throw new DbProviderUnsupportedException(dbProviderType);
+            return ToLanguageType(providerType, targetLanguage, dbColumnType);
+        }
+        
+        
     }
 }

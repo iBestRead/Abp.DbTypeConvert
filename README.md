@@ -4,8 +4,6 @@
 [![NuGetVersion](https://img.shields.io/nuget/v/iBestRead.Abp.DbTypeConvert)](https://www.nuget.org/packages/iBestRead.Abp.DbTypeConvert)
 [![NuGet Download](https://img.shields.io/nuget/dt/iBestRead.Abp.DbTypeConvert.svg)](https://www.nuget.org/packages/iBestRead.Abp.DbTypeConvert)
 
-
-
 # Type Mapping
 
 - [ ] [SqlServer](doc/SqlServerMapping.md)

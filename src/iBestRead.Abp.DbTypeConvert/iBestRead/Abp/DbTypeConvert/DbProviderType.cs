@@ -2,7 +2,6 @@ namespace iBestRead.Abp.DbTypeConvert
 {
     public enum DbProviderType
     {
-        
         SqlServer,
         // MySql,
         // MariaDd,

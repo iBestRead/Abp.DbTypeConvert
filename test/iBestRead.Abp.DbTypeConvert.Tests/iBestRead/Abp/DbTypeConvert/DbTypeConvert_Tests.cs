@@ -49,5 +49,16 @@ namespace iBestRead.Abp.DbTypeConvert
             result.ShouldBe(languageType);
         }
         
+        [Theory]
+        [InlineData("text", "STRING")]
+        [InlineData("uniqueidentifier", "STRING")]
+        [InlineData("smalldatetime", "DATETIME")]
+        [InlineData("timestamp", "BINARY")]
+        [InlineData("int", "INT")]
+        public void Convert_By_DbProviderTypeName(string dbColumnType, string languageType)
+        {
+            var result = _dbTypeConvert.ToMaxComputeType("SqlServer", dbColumnType);
+            result.ShouldBe(languageType);
+        }
     }
 }
