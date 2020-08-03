@@ -249,7 +249,7 @@
         },
         {
           "Language": "MaxCompute",
-          "TypeName": "INT"
+          "TypeName": "BIGINT"
         }
       ]
     },
@@ -262,7 +262,7 @@
         },
         {
           "Language": "MaxCompute",
-          "TypeName": "INT"
+          "TypeName": "BIGINT"
         }
       ]
     },
@@ -353,7 +353,7 @@
         },
         {
           "Language": "MaxCompute",
-          "TypeName": "INT"
+          "TypeName": "BIGINT"
         }
       ]
     },
