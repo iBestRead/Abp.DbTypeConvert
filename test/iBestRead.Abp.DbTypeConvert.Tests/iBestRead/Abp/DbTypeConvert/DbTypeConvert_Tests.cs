@@ -42,7 +42,7 @@ namespace iBestRead.Abp.DbTypeConvert
         [InlineData("uniqueidentifier", "STRING")]
         [InlineData("smalldatetime", "DATETIME")]
         [InlineData("timestamp", "BINARY")]
-        [InlineData("int", "INT")]
+        [InlineData("int", "BIGINT")]
         public void SqlServer_To_MaxCompute(string dbColumnType, string languageType)
         {
             var result = _dbTypeConvert.ToMaxComputeType(DbProviderType.SqlServer, dbColumnType);
@@ -54,10 +54,34 @@ namespace iBestRead.Abp.DbTypeConvert
         [InlineData("uniqueidentifier", "STRING")]
         [InlineData("smalldatetime", "DATETIME")]
         [InlineData("timestamp", "BINARY")]
-        [InlineData("int", "INT")]
+        [InlineData("int", "BIGINT")]
         public void Convert_By_DbProviderTypeName(string dbColumnType, string languageType)
         {
             var result = _dbTypeConvert.ToMaxComputeType("SqlServer", dbColumnType);
+            result.ShouldBe(languageType);
+        }
+                
+        [Theory]
+        [InlineData("varbinary", "byte[]")]
+        [InlineData("text", "string")]
+        [InlineData("uniqueidentifier", "Guid")]
+        [InlineData("smalldatetime", "DateTime")]
+        [InlineData("int", "int")]
+        public void MySql_To_CSharp(string dbColumnType, string languageType)
+        {
+            var result = _dbTypeConvert.ToCSharpType(DbProviderType.MySql, dbColumnType);
+            result.ShouldBe(languageType);
+        }
+        
+        [Theory]
+        [InlineData("text", "STRING")]
+        [InlineData("uniqueidentifier", "STRING")]
+        [InlineData("smalldatetime", "DATETIME")]
+        [InlineData("timestamp", "BINARY")]
+        [InlineData("int", "BIGINT")]
+        public void MySql_To_MaxCompute(string dbColumnType, string languageType)
+        {
+            var result = _dbTypeConvert.ToMaxComputeType(DbProviderType.MySql, dbColumnType);
             result.ShouldBe(languageType);
         }
     }

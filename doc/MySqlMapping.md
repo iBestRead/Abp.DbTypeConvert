@@ -1,12 +1,10 @@
-# SqlServer映射
+# MySql映射
 
-[json映射文件](../src/iBestRead.Abp.DbTypeConvert/iBestRead/Abp/DbTypeConvert/Mappings/SqlServer.json)
+[json映射文件](../src/iBestRead.Abp.DbTypeConvert/iBestRead/Abp/DbTypeConvert/Mappings/MySql.json)
 
 | Source           | CSharp         | MaxCompute |
 | ---------------- | -------------- | ---------- |
 | image            | byte[]         | BINARY     |
-| binary           | byte[]         | BINARY     |
-| varbinary        | byte[]         | BINARY     |
 | text             | string         | STRING     |
 | ntext            | string         | STRING     |
 | varchar          | string         | STRING     |
@@ -24,6 +22,7 @@
 | tinyint          | byte           | BIGINT     |
 | smallint         | short          | BIGINT     |
 | int              | int            | BIGINT     |
+| mediumint        | int            | BIGINT     |
 | bigint           | long           | BIGINT     |
 | bit              | bool           | BOOLEAN    |
 | char             | string         | STRING     |
@@ -32,7 +31,7 @@
 | numeric          | decimal        | DECIMAL    |
 | integer          | int            | BIGINT     |
 | money            | decimal        | DECIMAL    |
-| real             | float          | FLOAT      |
+| real             | decimal        | DECIMAL    |
 | blob             | byte[]         | BINARY     |
 | single           | float          | FLOAT      |
 | smallmoney       | decimal        | DECIMAL    |
@@ -43,5 +42,8 @@
 | number           | decimal        | DECIMAL    |
 | varbinary        | byte[]         | BINARY     |
 | boolean          | bool           | BOOLEAN    |
+| long             | byte[]         | BINARY     |
 | longtext         | string         | STRING     |
 | timestamp        | DateTime       | BINARY     |
+| double           | double         | DOUBLE     |
+| mediumtext       | string         | STRING     |

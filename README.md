@@ -11,8 +11,9 @@
 	- [x] To MaxCompute
 	- [ ] To PostgreSql
 	- [ ] To MySql
-- [ ] MySql
-	- [ ] To CSharp
+- [ ] [MySql](doc/MySqlMapping.md)
+	- [x] To CSharp
+	- [x] To MaxCompute
 - [ ] Oracle
 	- [ ] To CSharp
 - [ ] PostgreSql

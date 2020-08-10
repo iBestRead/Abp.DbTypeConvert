@@ -1,34 +1,8 @@
 {
-  "DbProviderType": "SqlServer",
+  "DbProviderType": "MySql",
   "Columns": [
     {
       "Source": "image",
-      "Targets": [
-        {
-          "Language": "CSharp",
-          "TypeName": "byte[]"
-        },
-        {
-          "Language": "MaxCompute",
-          "TypeName": "BINARY"
-        }
-      ]
-    },
-    {
-      "Source": "binary",
-      "Targets": [
-        {
-          "Language": "CSharp",
-          "TypeName": "byte[]"
-        },
-        {
-          "Language": "MaxCompute",
-          "TypeName": "BINARY"
-        }
-      ]
-    },
-    {
-      "Source": "varbinary",
       "Targets": [
         {
           "Language": "CSharp",
@@ -202,6 +176,10 @@
         {
           "Language": "CSharp",
           "TypeName": "TimeSpan"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "DATETIME"
         }
       ]
     },
@@ -211,19 +189,6 @@
         {
           "Language": "CSharp",
           "TypeName": "DateTimeOffset"
-        }
-      ]
-    },
-    {
-      "Source": "timestamp",
-      "Targets": [
-        {
-          "Language": "CSharp",
-          "TypeName": "DateTime"
-        },
-        {
-          "Language": "MaxCompute",
-          "TypeName": "BINARY"
         }
       ]
     },
@@ -255,6 +220,19 @@
     },
     {
       "Source": "int",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "int"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BIGINT"
+        }
+      ]
+    },
+    {
+      "Source": "mediumint",
       "Targets": [
         {
           "Language": "CSharp",
@@ -375,11 +353,11 @@
       "Targets": [
         {
           "Language": "CSharp",
-          "TypeName": "float"
+          "TypeName": "decimal"
         },
         {
           "Language": "MaxCompute",
-          "TypeName": "FLOAT"
+          "TypeName": "DECIMAL"
         }
       ]
     },
@@ -453,11 +431,24 @@
       "Targets": [
         {
           "Language": "CSharp",
-          "TypeName": "double"
+          "TypeName": "float"
         },
         {
           "Language": "MaxCompute",
-          "TypeName": "DOUBLE"
+          "TypeName": "FLOAT"
+        }
+      ]
+    },
+    {
+      "Source": "binary",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "byte[]"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BINARY"
         }
       ]
     },
@@ -475,6 +466,19 @@
       ]
     },
     {
+      "Source": "varbinary",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "byte[]"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BINARY"
+        }
+      ]
+    },
+    {
       "Source": "boolean",
       "Targets": [
         {
@@ -488,7 +492,59 @@
       ]
     },
     {
+      "Source": "long",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "byte[]"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BINARY"
+        }
+      ]
+    },
+    {
       "Source": "longtext",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "string"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "STRING"
+        }
+      ]
+    },
+    {
+      "Source": "timestamp",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "DateTime"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "BINARY"
+        }
+      ]
+    },
+    {
+      "Source": "double",
+      "Targets": [
+        {
+          "Language": "CSharp",
+          "TypeName": "double"
+        },
+        {
+          "Language": "MaxCompute",
+          "TypeName": "DOUBLE"
+        }
+      ]
+    },
+    {
+      "Source": "mediumtext",
       "Targets": [
         {
           "Language": "CSharp",

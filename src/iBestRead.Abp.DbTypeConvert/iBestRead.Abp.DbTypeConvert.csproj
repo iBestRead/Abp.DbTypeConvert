@@ -31,8 +31,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <EmbeddedResource Include="iBestRead\Abp\DbTypeConvert\Mappings\**\*.*" />
-        <Content Remove="iBestRead\Abp\DbTypeConvert\Mappings\**\*.*" />
+        <EmbeddedResource Include="iBestRead\Abp\DbTypeConvert\Mappings\**\*.json" />
+        <Content Remove="iBestRead\Abp\DbTypeConvert\Mappings\**\*.json" />
     </ItemGroup>
 
 </Project>

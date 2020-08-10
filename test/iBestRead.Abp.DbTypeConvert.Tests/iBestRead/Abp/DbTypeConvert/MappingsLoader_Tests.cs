@@ -20,5 +20,12 @@ namespace iBestRead.Abp.DbTypeConvert
             result.ShouldNotBeNull();
         }
         
+        [Fact]
+        public void Can_Get_MySql_Mapping()
+        {
+            var result = _mappingsLoader.Get(DbProviderType.MySql);
+        
+            result.ShouldNotBeNull();
+        }
     }
 }
