@@ -1,3 +1,4 @@
+using iBestRead.Database.Consts;
 using Volo.Abp;
 
 namespace iBestRead.Abp.DbTypeConvert.Exceptions

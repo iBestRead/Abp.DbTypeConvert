@@ -1,3 +1,5 @@
+using iBestRead.Database.Consts;
+
 namespace iBestRead.Abp.DbTypeConvert
 {
     public static class DefaultDbTypeConvertExtension

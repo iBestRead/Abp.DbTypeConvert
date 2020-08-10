@@ -1,4 +1,5 @@
 using iBestRead.Abp.DbTypeConvert.Exceptions;
+using iBestRead.Database.Consts;
 using Shouldly;
 using Volo.Abp.Testing;
 using Xunit;

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using iBestRead.Database.Consts;
 
 namespace iBestRead.Abp.DbTypeConvert
 {
