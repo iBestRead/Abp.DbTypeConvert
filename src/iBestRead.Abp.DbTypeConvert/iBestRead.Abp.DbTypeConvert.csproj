@@ -15,7 +15,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>3.0.5.2</Version>
+        <Version>3.0.5.3</Version>
         <Description>abp module for db type convert</Description>
         <AssemblyTitle>abp module for db type convert</AssemblyTitle>
         <Authors>AkiniX</Authors>

@@ -526,7 +526,7 @@
         },
         {
           "Language": "MaxCompute",
-          "TypeName": "BINARY"
+          "TypeName": "DATETIME"
         }
       ]
     },
