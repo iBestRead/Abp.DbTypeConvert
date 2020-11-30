@@ -78,11 +78,36 @@ namespace iBestRead.Abp.DbTypeConvert
         [InlineData("text", "STRING")]
         [InlineData("uniqueidentifier", "STRING")]
         [InlineData("smalldatetime", "DATETIME")]
-        [InlineData("timestamp", "BINARY")]
+        [InlineData("timestamp", "DATETIME")]
         [InlineData("int", "BIGINT")]
         public void MySql_To_MaxCompute(string dbColumnType, string languageType)
         {
             var result = _dbTypeConvert.ToMaxComputeType(DbProviderType.MySql, dbColumnType);
+            result.ShouldBe(languageType);
+        }
+        
+                        
+        [Theory]
+        [InlineData("VARBINARY", "byte[]")]
+        [InlineData("TEXT", "string")]
+        [InlineData("UNIQUEIDENTIFIER", "Guid")]
+        [InlineData("SMALLDATETIME", "DateTime")]
+        [InlineData("INT", "int")]
+        public void Oracle_To_CSharp(string dbColumnType, string languageType)
+        {
+            var result = _dbTypeConvert.ToCSharpType(DbProviderType.Oracle, dbColumnType);
+            result.ShouldBe(languageType);
+        }
+        
+        [Theory]
+        [InlineData("TEXT", "STRING")]
+        [InlineData("UNIQUEIDENTIFIER", "STRING")]
+        [InlineData("SMALLDATETIME", "DATETIME")]
+        [InlineData("TIMESTAMP", "DATETIME")]
+        [InlineData("INT", "BIGINT")]
+        public void Oracle_To_MaxCompute(string dbColumnType, string languageType)
+        {
+            var result = _dbTypeConvert.ToMaxComputeType(DbProviderType.Oracle, dbColumnType);
             result.ShouldBe(languageType);
         }
     }

@@ -28,5 +28,13 @@ namespace iBestRead.Abp.DbTypeConvert
         
             result.ShouldNotBeNull();
         }
+        
+        [Fact]
+        public void Can_Get_Oracle_Mapping()
+        {
+            var result = _mappingsLoader.Get(DbProviderType.Oracle);
+        
+            result.ShouldNotBeNull();
+        }
     }
 }
